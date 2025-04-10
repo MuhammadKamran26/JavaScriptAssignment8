@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alarm App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 40px;
+    }
+    input, button, select {
+      padding: 10px;
+      font-size: 16px;
+      margin: 8px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Alarm App</h1>
+  <h2 id="current-time">00:00:00</h2>
+
+  <input type="time" id="alarm-time">
+  
+  <select id="sound-select">
+    <option value="sound1">Bell</option>
+    <option value="sound2">Digital</option>
+    <option value="sound3">Beep</option>
+  </select>
+  <br>
+  <button onclick="setAlarm()">Set Alarm</button>
+  <button onclick="stopAlarm()">Stop Alarm</button>
+  <button onclick="snoozeAlarm()">Snooze 5 min</button>
+
+  <p><strong>Alarms Set:</strong></p>
+  <ul id="alarms-list"></ul>
+
+  <audio id="alarm-audio" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
